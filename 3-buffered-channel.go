@@ -17,7 +17,7 @@ func main() {
 	ch <- 300            //追加できる
 	fmt.Println(len(ch))
 
-	close(ch) //chをcloseする必要がある。これなしでfor文を回すと明日はずのない3つめの値を拾いにいってしまう
+	close(ch) //chをcloseする必要がある。これなしでfor文を回すとあるはずのない3つめの値を拾いにいってしまう
 	for c := range ch {
 		fmt.Println(c)
 	}
